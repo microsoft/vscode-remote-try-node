@@ -5,7 +5,7 @@ This is a sample project to go along with the "try" quick start for the VS Code 
 Using the sample:
 
 1. **[Windows]** Disable automatic line ending conversion for Git on the *Windows side* (given Linux and Windows use different line endings). Run: `git config --global core.autocrlf false`
-2. Follow the steps at [https://aka.ms/vsocde-remote/containers/getting-started](https://aka.ms/vsocde-remote/containers/getting-started).
+2. Follow the steps at [https://aka.ms/vscode-remote/containers/getting-started](https://aka.ms/vscode-remote/containers/getting-started).
 3. Run `yarn install`
 4. Launch the application, edit, and try things out!
 
