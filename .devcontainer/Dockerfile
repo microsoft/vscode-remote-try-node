@@ -15,8 +15,8 @@ RUN apt-get install -y curl apt-transport-https lsb-release \
     && apt-get update \
     && apt-get install -y yarn
 
-# Install tslint and typescript
-RUN npm install -g tslint typescript
+# Install eslint
+RUN npm install -g eslint
 
 # Clean up
 RUN apt-get autoremove -y \
