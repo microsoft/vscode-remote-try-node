@@ -18,7 +18,7 @@ Some things to try:
    1. Open `server.js`
    2. Try adding some code and check out the language features.
 3. **Build, Run, and Debug:**
-   1. Open `sever.js`
+   1. Open `server.js`
    2. Add a breakpoint (e.g. on line 20).
    3. Press <kbd>F5</kbd> to launch the app in the container.
    4. Once the breakpoint is hit, try hovering over variables, examining locals, and more.
