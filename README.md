@@ -19,12 +19,12 @@ Some things to try:
    2. Try adding some code and check out the language features.
 3. **Build, Run, and Debug:**
    1. Open `sever.js`
-   2. Add a breakpoint.
+   2. Add a breakpoint (e.g. on line 20).
    3. Press <kbd>F5</kbd> to launch the app in the container.
    4. Once the breakpoint is hit, try hovering over variables, examining locals, and more.
    5. Continue, then open a local browser and go to `http://localhost:3000` and note you can connect to the server in the container.
 4. **Forward another port:**
-   1. Stop debugging
+   1. Stop debugging and remove the breakpoint.
    2. Open `sever.js`
    3. Change the server port to 5000. (`const PORT = 5000;`)
    4. Press <kbd>F5</kbd> to launch the app in the container.
