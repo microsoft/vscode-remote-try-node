@@ -43,12 +43,7 @@ Follow these steps to open this sample in a container:
    2. Press <kbd>F1</kbd> and select the **Remote-Container: Open Folder in Container...** command.
    3. Select the cloned copy of this folder, wait for the container to start, and try things out!
 
-
-3. **[Windows]** Disable automatic line ending conversion for Git on the *Windows side* (given Linux and Windows use different line endings). Run: `git config --global core.autocrlf false`
-4. Follow the steps at [https://aka.ms/vscode-remote/containers/getting-started](https://aka.ms/vscode-remote/containers/getting-started).
-5. Run `yarn install`
-6. Launch the application, edit, and try things out!
-
+3. Press <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\`</kbd> to open a terminal window and run `yarn install`
 
 ## Contributing
 
