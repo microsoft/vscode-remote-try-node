@@ -10,7 +10,7 @@ One you have this sample opened in a container, you'll be able to work with it l
 
 Some things to try:
 
-1. **Use a Terminal to install needed dependencies:**
+1. **Use a Terminal run a command:**
    1. Press <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\`</kbd> to open a terminal window
    2. Type `yarn install`
    3. The command will run even if you don't have yarn installed locally!
@@ -43,7 +43,6 @@ Follow these steps to open this sample in a container:
    2. Press <kbd>F1</kbd> and select the **Remote-Container: Open Folder in Container...** command.
    3. Select the cloned copy of this folder, wait for the container to start, and try things out!
 
-3. Press <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\`</kbd> to open a terminal window and run `yarn install`
 
 ## Contributing
 
