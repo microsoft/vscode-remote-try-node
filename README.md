@@ -25,7 +25,7 @@ Some things to try:
    5. Continue, then open a local browser and go to `http://localhost:3000` and note you can connect to the server in the container.
 4. **Forward another port:**
    1. Stop debugging and remove the breakpoint.
-   2. Open `sever.js`
+   2. Open `server.js`
    3. Change the server port to 5000. (`const PORT = 5000;`)
    4. Press <kbd>F5</kbd> to launch the app in the container.
    5. Press <kbd>F1</kbd> and run the **Remote-Containers: Forward Port...** command.
