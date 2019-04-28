@@ -2,7 +2,7 @@
 
 This is a sample project to go along with the "Try a dev container" quick start for the **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)** extension.
 
-**If you aren't already following the quick start, [see below](#setting-up-the-development-container).**
+**If you are not yet in a development container, [see below](#setting-up-the-development-container).**
 
 ## Things to try
 
