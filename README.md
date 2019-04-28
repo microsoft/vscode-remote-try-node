@@ -12,7 +12,7 @@ Some things to try:
 
 1. **Edit:**
    - Open `server.js`
-   - Try adding some code and check out the language features.
+   - Try adding some code and check out the language features. Notice that `eslint` and the `vscode-eslint` extension are already installed in the container.
 2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
 3. **Build, Run, and Debug:**
    - Open `server.js`
