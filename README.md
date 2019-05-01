@@ -4,7 +4,7 @@ This is a sample project to go along with the "Try a dev container" quick start 
 
 ## Setting up the development container
 
-> **Note:** If you're following the quick start, you can skip this section since you've already followed these steps. 
+> **Note:** If you're following the quick start, you can jump to [Things to try](#things-to-try). 
 
 Follow these steps to open this sample in a container:
 
