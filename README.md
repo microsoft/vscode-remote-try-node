@@ -1,10 +1,10 @@
 # Try Out Development Containers: Node.js
 
-This is a sample project to go along with the "Try a dev container" quick start for the **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)** extension.
+This is a sample project that lets you try out the **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)** extension in a few easy steps.
+
+> **Note:** If you're following the quick start, you can jump to the [Things to try](#things-to-try) section. 
 
 ## Setting up the development container
-
-> **Note:** If you're following the quick start, you can jump to [Things to try](#things-to-try). 
 
 Follow these steps to open this sample in a container:
 
