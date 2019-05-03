@@ -30,7 +30,7 @@ Some things to try:
    - Add a breakpoint (e.g. on line 20).
    - Press <kbd>F5</kbd> to launch the app in the container.
    - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-   - Continue, then open a local browser and go to `http://localhost:3000` and note you can connect to the server in the container.
+   - Continue, then open a local browser and go to `http://localhost:3000` and note you can't connect to the server in the container.
 4. **Forward another port:**
    - Stop debugging and remove the breakpoint.
    - Open `server.js`
