@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See LICENSE in the project root for license information.
 #-----------------------------------------------------------------------------------------
 
-FROM node:lts
+FROM node:10
 
 # Configure apt
 ENV DEBIAN_FRONTEND=noninteractive
@@ -11,7 +11,7 @@ RUN apt-get update \
    && apt-get -y install --no-install-recommends apt-utils 2>&1
 
 # Verify git and process tools are installed
-RUN apt-get install -y git procps
+RUN apt-get install -y git procps lsb-release
 
 # Remove outdated yarn from /opt and install via package 
 # so it can be easily updated via apt-get upgrade yarn
@@ -32,3 +32,6 @@ RUN apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=dialog
+
+# Set the default shell to bash rather than sh
+ENV SHELL /bin/bash
