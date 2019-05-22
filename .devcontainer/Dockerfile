@@ -11,7 +11,7 @@ RUN apt-get update \
    && apt-get -y install --no-install-recommends apt-utils 2>&1
 
 # Verify git and process tools are installed
-RUN apt-get install -y git procps lsb-release
+RUN apt-get install -y git procps
 
 # Remove outdated yarn from /opt and install via package 
 # so it can be easily updated via apt-get upgrade yarn
