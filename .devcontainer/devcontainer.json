@@ -5,5 +5,8 @@
     "extensions": [
         "dbaeumer.vscode-eslint"
     ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
     "postCreateCommand": "yarn install"
 }
