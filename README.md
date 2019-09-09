@@ -19,7 +19,7 @@ Follow these steps to open this sample in a container:
 
 ## Things to try
 
-One you have this sample opened in a container, you'll be able to work with it like you would locally.
+Once you have this sample opened in a container, you'll be able to work with it like you would locally.
 
 > **Note:** This container runs as a non-root user with sudo access by default. Comment out `"runArgs":["-u", "1000"]` in `.devcontainer/devcontainer.json` if you'd prefer to run as root.
 
