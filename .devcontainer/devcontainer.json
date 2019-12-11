@@ -2,12 +2,12 @@
     "name": "Node.js Sample",
     "dockerFile": "Dockerfile",
 
-    // Specifies a list of ports that should be published.
+    // Use 'appPort' to create a container with published ports. If the port isn't working, be sure
+    // your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
     "appPort": [3000],
 
-    // Comment out the next line to run as root instead. Linux users, update
-    // Dockerfile with your user's UID/GID if not 1000.
-    "runArgs": [ "-u", "node" ],
+    // Comment out the next line to run as root instead.
+    "remoteUser": "node",
 
     // Use 'settings' to set *default* container specific settings.json values on container create. 
     // You can edit these settings after create using File > Preferences > Settings > Remote.
@@ -18,6 +18,7 @@
     // Specifies a command that should be run after the container has been created.
     "postCreateCommand": "yarn install",
 
+    // Add the IDs of extensions you want installed when the container is created in the array below.
     "extensions": [
         "dbaeumer.vscode-eslint"
     ]
