@@ -34,6 +34,8 @@ RUN apt-get update \
     && apt-get update \
     && apt-get -y install --no-install-recommends yarn \
     #
+    # Install @aws-amplify globally
+    && npm install -g @aws-amplify/cli \
     # Install eslint globally
     && npm install -g eslint \
     #
