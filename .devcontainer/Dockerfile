@@ -22,7 +22,17 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
         groupmod --gid $USER_GID $USERNAME \
         && usermod --uid $USER_UID --gid $USER_GID $USERNAME \
         && chown -R $USER_UID:$USER_GID /home/$USERNAME; \
-    fi
+    fi \
+    #
+    # Avoid having to use "sudo" with "npm -g" when running as non-root user
+    && SNIPPET='if [ "$(stat -c %U /usr/local/lib/node_modules)" != "$(id -u)" ]; then \
+            sudo chown -R $(id -u):root /usr/local/lib/node_modules \
+            && sudo chown -R $(id -u):root /usr/local/bin; \
+        fi' \
+    && echo $SNIPPET >> /home/$USERNAME/.bashrc \
+    && echo $SNIPPET >> /home/$USERNAME/.zshrc \
+    && chown $USERNAME /home/$USERNAME/.bashrc /home/$USERNAME/.zshrc \
+
 
 # *************************************************************
 # * Uncomment this section to use RUN instructions to install *
