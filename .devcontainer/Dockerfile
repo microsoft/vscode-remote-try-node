@@ -17,6 +17,8 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ARG USERNAME=node
 
+ENV PATH=${PATH}:/usr/local/share/npm-global/bin
+
 # [Optional] Update UID/GID if needed
 RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
         groupmod --gid $USER_GID $USERNAME \
@@ -24,14 +26,11 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
         && chown -R $USER_UID:$USER_GID /home/$USERNAME; \
     fi \
     #
-    # Avoid having to use "sudo" with "npm -g" when running as non-root user
-    && SNIPPET='if [ "$(stat -c %U /usr/local/lib/node_modules)" != "$(id -u)" ]; then \
-            sudo chown -R $(id -u):root /usr/local/lib/node_modules \
-            && sudo chown -R $(id -u):root /usr/local/bin; \
-        fi' \
-    && echo $SNIPPET >> /home/$USERNAME/.bashrc \
-    && echo $SNIPPET >> /home/$USERNAME/.zshrc \
-    && chown $USERNAME /home/$USERNAME/.bashrc /home/$USERNAME/.zshrc \
+    # Set alternate global install location that both uses have rights to access
+    && mkdir -p /usr/local/share/npm-global \
+    && chown ${USERNAME}:root /usr/local/share/npm-global \
+    && npm config -g set prefix /usr/local/share/npm-global \
+    && sudo -u ${USERNAME} npm config -g set prefix /usr/local/share/npm-global \
 
 
 # *************************************************************
