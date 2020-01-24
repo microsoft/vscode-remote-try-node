@@ -17,20 +17,12 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ARG USERNAME=node
 
-ENV PATH=${PATH}:/usr/local/share/npm-global/bin
-
 # [Optional] Update UID/GID if needed
 RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
         groupmod --gid $USER_GID $USERNAME \
         && usermod --uid $USER_UID --gid $USER_GID $USERNAME \
         && chown -R $USER_UID:$USER_GID /home/$USERNAME; \
-    fi \
-    #
-    # Set alternate global install location that both uses have rights to access
-    && mkdir -p /usr/local/share/npm-global \
-    && chown ${USERNAME}:root /usr/local/share/npm-global \
-    && npm config -g set prefix /usr/local/share/npm-global \
-    && sudo -u ${USERNAME} npm config -g set prefix /usr/local/share/npm-global
+    fi
 
 # *************************************************************
 # * Uncomment this section to use RUN instructions to install *
