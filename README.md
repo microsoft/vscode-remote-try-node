@@ -45,7 +45,7 @@ Some things to try:
    - Open `server.js`
    - Change the server port to 5000. (`const PORT = 5000;`)
    - Press <kbd>F5</kbd> to launch the app in the container.
-   - Press <kbd>F1</kbd> and run the **Remote-Containers: Forward Port from Container...** command.
+   - Press <kbd>F1</kbd> and run the **Forward a Port** command.
    - Select port 5000.
    - Click "Open Browser" in the notification that appears to access the web app on this new port.
 
