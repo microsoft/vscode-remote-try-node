@@ -3,8 +3,8 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-# For information on the contents of the container image below, see following Dockerfile:
-# https://github.com/microsoft/vscode-dev-containers/tree/v0.43.0/containers/javascript-node-12/.devcontainer/Dockerfile
+# To fully customize the contents of this image, use the following Dockerfile instead:
+# https://github.com/microsoft/vscode-dev-containers/tree/v0.112.0/containers/javascript-node-12/.devcontainer/Dockerfile
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-12
 
 # The image referenced above includes a non-root user with sudo access. Add
