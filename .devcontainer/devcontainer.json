@@ -1,5 +1,5 @@
 {
-    "name": "Node.js Sample",
+    "name": "Sentry Health IDE Demo",
     "dockerFile": "Dockerfile",
 
     // Use 'settings' to set *default* container specific settings.json values on container create. 
@@ -9,8 +9,11 @@
 
     // Add the IDs of extensions you want installed when the container is created in the array below.
     "extensions": [
-        "dbaeumer.vscode-eslint"
-    ],
+		"dbaeumer.vscode-eslint",
+		"bengreenier.vscode-node-readme",
+		"jasonnutter.search-node-modules",
+		"dkundel.vscode-npm-source"
+	],
     
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [3000],
