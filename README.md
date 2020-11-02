@@ -38,15 +38,12 @@ Some things to try:
    - Add a breakpoint (e.g. on line 20).
    - Press <kbd>F5</kbd> to launch the app in the container.
    - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-   - Continue, then open a local browser and go to `http://localhost:3000` and note you can connect to the server in the container.
-4. **Forward another port:**
-   - Stop debugging and remove the breakpoint.
-   - Open `server.js`
-   - Change the server port to 5000. (`const PORT = 5000;`)
-   - Press <kbd>F5</kbd> to launch the app in the container.
-   - Press <kbd>F1</kbd> and run the **Forward a Port** command.
-   - Select port 5000.
-   - Click "Open Browser" in the notification that appears to access the web app on this new port.
+   - Continue and from the notification that is shown open a browser. Note you can connect to the server in the container. 
+   - The status line shows '1 Port Available'. Clicking the status bar entry shows the 'Ports' view that lists the currently available ports.
+4. **Forward a port statically:**
+You can also forward a port statically in the `.devcontainer/devcontainer.json` file.
+   - Open the `.devcontainer/devcontainer.json` file.
+   - Comment out the line with the definition of the `forwardedPorts` attribute and adjust the port number as needed.
 
 ## Contributing
 
