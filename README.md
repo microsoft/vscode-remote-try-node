@@ -40,10 +40,10 @@ Some things to try:
    - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
    - Continue and from the notification that is shown open a browser. Note you can connect to the server in the container. 
    - The status line shows '1 Port Available'. Clicking the status bar entry shows the 'Ports' view that lists the currently available ports.
-4. **Forward a port statically:**
-You can also forward a port statically in the `.devcontainer/devcontainer.json` file.
+4. **Forward a port statically:** You can also forward a port statically in the `.devcontainer/devcontainer.json` file.
    - Open the `.devcontainer/devcontainer.json` file.
-   - Comment out the line with the definition of the `forwardedPorts` attribute and adjust the port number as needed.
+   - Uncomment the `forwardedPorts` attribute and adjust the port number as needed.
+   - Press <kbd>F1</kbd> and select the **Remote-Containers: Rebuild Container** command so the modifications are picked up.
 
 ## Contributing
 
