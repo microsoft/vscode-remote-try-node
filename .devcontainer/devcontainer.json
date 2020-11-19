@@ -19,7 +19,7 @@
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000],
+	// "forwardPorts": [3000],
 
 	// Specifies a command that should be run after the container has been created.
 	"postCreateCommand": "yarn install",
