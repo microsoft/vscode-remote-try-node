@@ -1,12 +1,25 @@
-# Try Out Development Containers: Node.js (test change)
+# Try Out Development Containers: Node.js
 
-This is a sample project that lets you try out the **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)** extension in a few easy steps.
+A **development container** is a running [Docker](https://www.docker.com) container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with GtiHub Codespaces or **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)**.
+
+[GitHub Codespaces](https://github.com/features/codespaces) both use this same concept to quickly create customized, cloud-based development environments accessible [from VS Code](https://aka.ms/vso-dl) or the web. _Request access to beta if user does not already have it_
+
+The [VS Code Remote - Containers](https://aka.ms/vscode-remote/download/containers) extension allows you to clone a repository or open any folder mounted into (or already inside) a dev container and take advantage of VS Code's full development feature set. 
+
+This is a sample project that lets you try out either option in a few easy steps.
 
 > **Note:** If you're following the quick start, you can jump to the [Things to try](#things-to-try) section.
 
 ## Setting up the development container
 
-Follow these steps to open this sample in a container:
+### GitHub Codespaces
+Follow these steps to open this sample in a codespace:
+1. **Insert instructions on creating a repo from the template** 
+1. Use the  Code drop-down menu, and select Open with Codespaces.
+  - Insert screenshot of Code button
+  
+### VS Code Remote - Containers
+Follow these steps to open this sample in a container using the VS Code Remote - Containers extension:
 
 1. If this is your first time using a development container, please follow the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
 
@@ -21,9 +34,10 @@ Follow these steps to open this sample in a container:
    - Clone this repository to your local filesystem.
    - Press <kbd>F1</kbd> and select the **Remote-Containers: Open Folder in Container...** command.
    - Select the cloned copy of this folder, wait for the container to start, and try things out!
+
 ## Things to try
 
-Once you have this sample opened in a container, you'll be able to work with it like you would locally.
+Once you have this sample opened, you'll be able to work with it like you would locally.
 
 > **Note:** This container runs as a non-root user with sudo access by default. Comment out `"remoteUser": "node"` in `.devcontainer/devcontainer.json` if you'd prefer to run as root.
 
@@ -31,7 +45,7 @@ Some things to try:
 
 1. **Edit:**
    - Open `server.js`
-   - Try adding some code and check out the language features. Notice that `eslint` and the `vscode-eslint` extension are already installed in the container.
+   - Try adding some code and check out the language features. Notice that `eslint` and the `vscode-eslint` extension are already installed in the container _insert reasoning_.
 2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
 3. **Build, Run, and Debug:**
    - Open `server.js`
@@ -40,7 +54,9 @@ Some things to try:
    - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
    - Continue and from the notification that is shown open a browser. Note you can connect to the server in the container. 
    - The status line shows '1 Port Available'. Clicking the status bar entry shows the 'Ports' view that lists the currently available ports.
-4. **Forward a port statically:** You can also forward a port statically in the `.devcontainer/devcontainer.json` file.
+4. Rebuild or update your container _Brigit_
+  - Note: This only applies to containers with the VS Code Remote - Containers ext.
+**Forward a port statically:** You can also forward a port statically in the `.devcontainer/devcontainer.json` file.
    - Open the `.devcontainer/devcontainer.json` file.
    - Uncomment the `forwardedPorts` attribute and adjust the port number as needed.
    - Press <kbd>F1</kbd> and select the **Remote-Containers: Rebuild Container** command so the modifications are picked up.
