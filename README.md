@@ -2,7 +2,8 @@
 
 A **development container** is a running [Docker](https://www.docker.com) container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with GitHub Codespaces or **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)**.
 
-[GitHub Codespaces](https://github.com/features/codespaces) both use this same concept to quickly create customized, cloud-based development environments accessible [from VS Code](https://aka.ms/vso-dl) or the web. _[Request access](https://github.com/features/codespaces/signup) to the Codespaces beta if you have not already._
+[GitHub Codespaces](https://github.com/features/codespaces) allows you to quickly create customized, cloud-based development environments accessible [from VS Code](https://aka.ms/vso-dl) or the web. 
+> **Note:** While GitHub Codespaces is in limited public beta, please _[request access](https://github.com/features/codespaces/signup) if you have not already._
 
 The [VS Code Remote - Containers](https://aka.ms/vscode-remote/download/containers) extension allows you to clone a repository or open any folder mounted into (or already inside) a dev container and take advantage of VS Code's full development feature set. 
 
@@ -14,9 +15,10 @@ This is a sample project that lets you try out either option in a few easy steps
 
 ### GitHub Codespaces
 Follow these steps to open this sample in a Codespace:
-1. **Insert instructions on creating a repo from the template** 
-1. Use the  Code drop-down menu, and select Open with Codespaces.
-  - Insert screenshot of Code button
+1. Click the  Code drop-down menu and select the `Open with Codespaces` option.
+  ![image](https://user-images.githubusercontent.com/3174849/103961250-f2cc5e00-5108-11eb-8a15-04a1a2de7491.png)
+1. Select `+ New codespace` at the bottom on the pane. This will create a fork of this repository under your account and your codespace will open in a new tab.
+   ![image](https://user-images.githubusercontent.com/3174849/103962008-ada92b80-510a-11eb-894d-6e804403acb3.png)
   
 ### VS Code Remote - Containers
 Follow these steps to open this sample in a container using the VS Code Remote - Containers extension:
@@ -56,9 +58,10 @@ Some things to try:
    - Continue and from the notification that is shown open a browser. Note you can connect to the server in the container. 
    - The status line shows '1 Port Available'. Clicking the status bar entry shows the 'Ports' view that lists the currently available ports.
 4. **Rebuild or update your container** (*Currently, only containers with the VS Code Remote - Containers extension can be rebuilt.*)
-   - You may want to make changes to your container, such as installing a different version of a software or forwarding a new port. You'll rebuild your container for your changes to take effect. 
+
+   You may want to make changes to your container, such as installing a different version of a software or forwarding a new port. You'll rebuild your container for your changes to take effect. 
    
-- **Forward a port statically:** As an example change, let's forward a port statically in the `.devcontainer/devcontainer.json` file. 
+   **Forward a port statically:** As an example change, let's forward a port statically in the `.devcontainer/devcontainer.json` file. 
      
    > **Note:** Remote-Containers and Codespaces also take care of dynamic port forwarding, but there may be instances in which we want to statically declare a forwarded port. 
    
