@@ -1,11 +1,6 @@
 # Try Out Development Containers: Node.js
 
-A **development container** is a running [Docker](https://www.docker.com) container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with GitHub Codespaces or **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)**.
-
-[GitHub Codespaces](https://github.com/features/codespaces) allows you to quickly create customized, cloud-based development environments accessible [from VS Code](https://aka.ms/vso-dl) or the web. 
-> **Note:** While GitHub Codespaces is in limited public beta, please _[request access](https://github.com/features/codespaces/signup) if you have not already._
-
-The [VS Code Remote - Containers](https://aka.ms/vscode-remote/download/containers) extension allows you to clone a repository or open any folder mounted into (or already inside) a dev container and take advantage of VS Code's full development feature set. 
+A **development container** is a running [Docker](https://www.docker.com) container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with [GitHub Codespaces](https://github.com/features/codespaces) or **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)**.
 
 This is a sample project that lets you try out either option in a few easy steps. We have a variety of other [vscode-remote-try-*](https://github.com/search?q=org%3Amicrosoft+vscode-remote-try-&type=Repositories) sample projects, too.
 
@@ -15,10 +10,10 @@ This is a sample project that lets you try out either option in a few easy steps
 
 ### GitHub Codespaces
 Follow these steps to open this sample in a Codespace:
-1. Click the  Code drop-down menu and select the `Open with Codespaces` option.
-  ![image](https://user-images.githubusercontent.com/3174849/103961250-f2cc5e00-5108-11eb-8a15-04a1a2de7491.png)
-1. Select `+ New codespace` at the bottom on the pane. This will create a fork of this repository under your account and your codespace will open in a new tab.
-   ![image](https://user-images.githubusercontent.com/3174849/103962008-ada92b80-510a-11eb-894d-6e804403acb3.png)
+1. Click the Code drop-down menu and select the **Open with Codespaces** option.
+1. Select **+ New codespace** at the bottom on the pane. If you don't own the repo, this will create a fork of this repository under your account.
+
+For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
   
 ### VS Code Remote - Containers
 Follow these steps to open this sample in a container using the VS Code Remote - Containers extension:
