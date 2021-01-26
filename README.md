@@ -11,7 +11,7 @@ This is a sample project that lets you try out either option in a few easy steps
 ### GitHub Codespaces
 Follow these steps to open this sample in a Codespace:
 1. Click the Code drop-down menu and select the **Open with Codespaces** option.
-1. Select **+ New codespace** at the bottom on the pane. If you don't own the repo, this will create a fork of this repository under your account.
+1. Select **+ New codespace** at the bottom on the pane.
 
 For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
   
@@ -50,8 +50,9 @@ Some things to try:
    - Add a breakpoint (e.g. on line 20).
    - Press <kbd>F5</kbd> to launch the app in the container.
    - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-   - Continue and from the notification that is shown open a browser. Note you can connect to the server in the container. 
-   - The status line shows '1 Port Available'. Clicking the status bar entry shows the 'Ports' view that lists the currently available ports.
+   - Continue (<kbd>F5</kbd>). You can connect to the server in the container by either: clicking on `Running on http://0.0.0.0:3000` in the terminal output, or "Open in Browser" next to port 3000 in the 'Ports' view (you can get to the 'Ports' view by clicking on the "1" in the status bar, which means your app has 1 forwarded port).
+   
+   > **Note:** In Remote - Containers, you can access your app at `http://localhost:3000` in a local browser. But in a browser-based Codespace, you must click the link from the terminal output or the `Ports` view so that the service handles port forwarding in the browser and generates the correct URL.
 4. **Rebuild or update your container** (*Currently, only containers with the VS Code Remote - Containers extension can be rebuilt.*)
 
    You may want to make changes to your container, such as installing a different version of a software or forwarding a new port. You'll rebuild your container for your changes to take effect. 
