@@ -1,5 +1,5 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.159.0/containers/javascript-node
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/javascript-node
 {
 	"name": "Node.js",
 	"build": {
