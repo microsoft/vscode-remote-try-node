@@ -1,11 +1,11 @@
-// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.134.0/containers/javascript-node
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.163.1/containers/javascript-node
 {
 	"name": "Node.js",
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick a Node version: 10, 12, 14
-		"args": { "VARIANT": "12" }
+		"args": { "VARIANT": "14" }
 	},
 
 	// Set *default* container specific settings.json values on container create.
@@ -17,13 +17,13 @@
 	"extensions": [
 		"dbaeumer.vscode-eslint"
 	],
-	
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [3000],
 
-	// Specifies a command that should be run after the container has been created.
+	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "yarn install",
 
-	// Comment out the next line to run as root instead.
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node"
 }
