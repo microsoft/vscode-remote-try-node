@@ -52,10 +52,11 @@ Some things to try:
    - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
    - Continue (<kbd>F5</kbd>). You can connect to the server in the container by either: 
       - Clicking on `Open in Browser` in the notification telling you: `Your service running on port 3000 is available`.
-      - Clicking the globe icon in the 'Ports' view. The 'Ports' view gives you an organized table of your forwarded ports, and you can get there with the command **Ports: Focus on Ports View**.
+      - Clicking the globe icon in the 'Ports' view. The 'Ports' view gives you an organized table of your forwarded ports, and you can access it with the command **Ports: Focus on Ports View**.
    - Notice port 3000 in the 'Ports' view is labeled "My Port." In `devcontainer.json`, you can set `"remote.portsAttributes"`, such as a label for your forwarded ports and the action to be taken when the port is autoforwarded.
 
-   > **Note:** In Remote - Containers, you can access your app at `http://localhost:3000` in a local browser. But in a browser-based Codespace, you must click the link from the terminal output or the `Ports` view so that the service handles port forwarding in the browser and generates the correct URL.
+   > **Note:** In Remote - Containers, you can access your app at `http://localhost:3000` in a local browser. But in a browser-based Codespace, you must click the link from the notification or the `Ports` view so that the service handles port forwarding in the browser and generates the correct URL.
+   
 4. **Rebuild or update your container**
 
    You may want to make changes to your container, such as installing a different version of a software or forwarding a new port. You'll rebuild your container for your changes to take effect. 
