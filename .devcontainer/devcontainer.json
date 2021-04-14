@@ -21,16 +21,21 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [3000],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "yarn install",
-
 	// Use 'portsAttributes' to set default properties for specific forwarded ports.
+	// You can use a port number (i.e. 3000), range of numbers, or a regex to match the running process.
 	"portsAttributes": {
-		"3000": {
-			"label": "Hello Remote World",
-			"onAutoForward": "notify"
+		".+/server.js": {
+			"label": "Hello Remote World"
 		}
 	},
+
+	// Use 'otherPortsAttributes' to configure any ports that aren't configured using 'portsAttributes'.
+	// "otherPortsAttributes": {
+	// 		"onAutoForward": "silent"
+	// },
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "yarn install",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node"

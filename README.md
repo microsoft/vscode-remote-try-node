@@ -53,7 +53,7 @@ Some things to try:
    - Continue (<kbd>F5</kbd>). You can connect to the server in the container by either: 
       - Clicking on `Open in Browser` in the notification telling you: `Your service running on port 3000 is available`.
       - Clicking the globe icon in the 'Ports' view. The 'Ports' view gives you an organized table of your forwarded ports, and you can access it with the command **Ports: Focus on Ports View**.
-   - Notice port 3000 in the 'Ports' view is labeled "Hello Remote World." In `devcontainer.json`, you can set `"portsAttributes"`, such as a label for your forwarded ports and the action to be taken when the port is autoforwarded.
+   - Notice port 3000 in the 'Ports' view is labeled "Hello Remote World." In `devcontainer.json`, you can set `"portsAttributes"`, such as a label for your forwarded ports and the action to be taken when the port is autoforwarded. 
 
    > **Note:** In Remote - Containers, you can access your app at `http://localhost:3000` in a local browser. But in a browser-based Codespace, you must click the link from the notification or the `Ports` view so that the service handles port forwarding in the browser and generates the correct URL.
    
@@ -61,12 +61,10 @@ Some things to try:
 
    You may want to make changes to your container, such as installing a different version of a software or forwarding a new port. You'll rebuild your container for your changes to take effect. 
    
-   **Forward a port statically:** As an example change, let's forward a port statically in the `.devcontainer/devcontainer.json` file. 
-     
-   > **Note:** Remote-Containers and Codespaces also take care of dynamic port forwarding, but there may be instances in which we want to statically declare a forwarded port. 
+   **Forward a port statically:** As an example change, let's update the `portsAttributes` in the `.devcontainer/devcontainer.json` file to open a browser when our port is automatically forwarded.
    
    - Open the `.devcontainer/devcontainer.json` file.
-   - Uncomment the `forwardedPorts` attribute and adjust the port number as needed.
+   - Modify your `portsAttributes` to include a new attribute (you can add it underneath the `label` attribute): `"onAutoForward": "openBrowser"`.
    - Press <kbd>F1</kbd> and select the **Remote-Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
 
 ## Contributing
