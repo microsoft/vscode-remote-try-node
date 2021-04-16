@@ -61,7 +61,7 @@ Some things to try:
 
    You may want to make changes to your container, such as installing a different version of a software or forwarding a new port. You'll rebuild your container for your changes to take effect. 
    
-   **Forward a port statically:** As an example change, let's update the `portsAttributes` in the `.devcontainer/devcontainer.json` file to open a browser when our port is automatically forwarded.
+   **Open browser automatically:** As an example change, let's update the `portsAttributes` in the `.devcontainer/devcontainer.json` file to open a browser when our port is automatically forwarded.
    
    - Open the `.devcontainer/devcontainer.json` file.
    - Modify your `portsAttributes` to include a new attribute (you can add it underneath the `label` attribute): `"onAutoForward": "openBrowser"`.
