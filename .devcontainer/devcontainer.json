@@ -21,11 +21,11 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [3000],
 
-	// Use 'portsAttributes' to set default properties for specific forwarded ports.
-	// You can use a port number (i.e. 3000), range of numbers, or a regex to match the running process.
+	// Use 'portsAttributes' to set default properties for specific forwarded ports. More info: https://code.visualstudio.com/docs/remote/devcontainerjson-reference.
 	"portsAttributes": {
-		".+/server.js": {
-			"label": "Hello Remote World"
+		"3000": {
+			"label": "Hello Remote World",
+			"onAutoForward": "notify"
 		}
 	},
 
