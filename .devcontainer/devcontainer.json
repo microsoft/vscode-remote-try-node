@@ -12,11 +12,7 @@
 			"NODE_VERSION": "lts/*"
 		}
 	},
-	"hostRequirements": {
-		"cpus": 8,
-		"memory": "8gb",
-		"storage": "32gb" 
-	 }
+	
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
 
@@ -24,7 +20,9 @@
 	"extensions": [
 		"ms-dotnettools.csharp"
 	],
-
+	"hostRequirements": {
+		"memory": "8gb"		 
+	 }
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5000, 5001],
 
