@@ -12,7 +12,11 @@
 			"NODE_VERSION": "lts/*"
 		}
 	},
-
+	"hostRequirements": {
+		"cpus": 8,
+		"memory": "8gb",
+		"storage": "32gb" 
+	 }
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
 
