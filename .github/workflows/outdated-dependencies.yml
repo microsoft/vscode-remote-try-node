@@ -1,0 +1,14 @@
+name: Check Outdated
+
+on: [push] # pull request, cronjob, etc. https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+
+jobs:
+  check_updates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install npm
+        run: npm install
+      - name: Check outdated
+        run: npm outdated
