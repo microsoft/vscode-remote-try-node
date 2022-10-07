@@ -1,0 +1,29 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1EZ3dOakl3TkRJeU1Gb1hEVEk1TURnd016SXdOREl5TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVN2CnZOc2tadzhxeTVyTHUxMW9hSVE2ejRpMFExalUyYjR1bUxvVzZINU44UG5OQ2FzSWE3dC90OGZRRmVuOHNIdSsKbUM1N0hjNDBMNEJRRTJ6UXkreTkzK1pFUTZGSlcxVlpYRit3aWpTdTZhRE1ReHFTakd1K2xYWTZCeFowR0hlSQpxZUR1RHNsN0pDUElJa2VBNEtPeGhNYTVib0dpZmZvRHJjYzZvTDZaUGg3c2MvZVd3SkRZL0Mxc2tlWUtLUm50CmN6MTdnNEkxaEs2ZEJmQVU3dHc2STZDSnlnN3NQOVcyVENlVXNDcFJ0MlY2OFE4QWhQVDRUR0h3cXMwL1hERDcKcGpjZnIyQzVkeFAwU2RZcVhPQklwTGlwdzFJSHFEeVUxYnh0aG5SWmFRaVZjc2VQdWsrMTRZenN6ZGRjbE9wWAprcmg0QUszSzBicmJBQXNlN3VjQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFLczJBMEg1RDdyS1V0d0pqWWN1ajdKc1hTd08KTDgwSXlDK0NydHNQTXdWZnN5MGNqSVV6dEJKR1FjYklObnREbWw0VndFN3FITEpBRmlGMjA3ajFFVkZCRkxFbgpRSHpSdTdOcHhZZkFyRnVlZDE0S1FETXhYUFFNL3RiL0JZTThtQmk5ay9lRG5MZHBaUVNvRldxbEU5WlhiTUVKClRMbmNFaHMrbS9oUXMyVHA5TjNUbU5NdzNhUVNXYTFEZFFVck1ZM280WkdFUXZ5a3ZSYmIzTVdLSTBqQkhRV3YKM1ZFazJjanlPVHhhK0JSYWNhTG1SMk9uVGxqckJtK1BuVkkxVHduVGFsRTNSZWtQb3EwellSdFRDZHZoTlNPMAo3a2hIa2ozSVd6ZjhEamNOL2dVL0dJY3A5ZUE1VWpWTTZPRXJDRWM0YUxFTjU5WnFqSFo3SVZFWXp0UT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://562E040058A575D11312510BF53EE5D7.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:229778397861:cluster/segware
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:229778397861:cluster/segware
+    user: arn:aws:eks:us-east-1:229778397861:cluster/segware
+  name: arn:aws:eks:us-east-1:229778397861:cluster/segware
+current-context: arn:aws:eks:us-east-1:229778397861:cluster/segware
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:229778397861:cluster/segware
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - segware
+      command: aws
+
+
