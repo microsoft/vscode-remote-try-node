@@ -1,8 +1,0 @@
-pool:
-  vmImage: ubuntu-latest
-
-trigger:
-- main
-
-variables:
-  Codeql.Enabled: true
