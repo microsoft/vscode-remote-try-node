@@ -50,7 +50,7 @@ Some things to try:
    - Open `server.js`
    - Try adding some code and check out the language features. 
    - Make a spelling mistake and notice it is detected. The [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extension was automatically installed because it is referenced in `.devcontainer/devcontainer.json`.
-   - Also notice that `eslint` and the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) are installed since the `mcr.microsoft.com/devcontainers/javascript-node` image includes them and Dev Container settings and metadata are also automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
+   - Also notice that `eslint` and the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) are installed. Tools are installed in the `mcr.microsoft.com/devcontainers/javascript-node` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
 
 2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
 3. **Build, Run, and Debug:**
