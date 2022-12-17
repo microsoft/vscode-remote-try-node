@@ -23,18 +23,14 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [3000],
 
-	// Use 'portsAttributes' to set default properties for specific forwarded ports.
+	// Use 'portsAttributes' to set default properties for specific forwarded ports. 
+	// More info: https://containers.dev/implementors/json_reference/#port-attributes
 	"portsAttributes": {
-		"3000": {
+		"9000": {
 			"label": "Hello Remote World",
 			"onAutoForward": "notify"
 		}
 	},
-	
-	// Use 'otherPortsAttributes' to configure any ports that aren't configured using 'portsAttributes'.
-	// "otherPortsAttributes": {
-	// 		"onAutoForward": "silent"
-	// },
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "yarn install"
