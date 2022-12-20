@@ -74,6 +74,13 @@ Some things to try:
    - Modify the `"onAutoForward"` attribute in your `portsAttributes` from `"notify"` to `"openBrowser"`.
    - Press <kbd>F1</kbd> and select the **Dev Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
 
+5. **Install the GitHub CLI using a Dev Container Feature:**
+   - Press <kbd>F1</kbd> and select the **Dev Containers: Configure Container Features...** or **Codespaces: Configure Container Features...** command.
+   - Type "github" in the text box at the top.
+   - Check the check box next to "GitHub CLI" (published by devcontainers) 
+   - Click OK
+   - Press <kbd>F1</kbd> and select the **Dev Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
