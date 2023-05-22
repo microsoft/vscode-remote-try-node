@@ -1,0 +1,15 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: orange;
+    
+}
+.logo{
+    color:black;
+    font-size: 5.5rem;
+}
