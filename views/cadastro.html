@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Forge Fitness</title>
+    <link rel="stylesheet" href="/tooplate-forge-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <div class="loading-bar"></div>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">FORGE FITNESS</a>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Início</a></li>
+                <li><a href="/cadastro" class="nav-link active">Cadastro</a></li>
+                <li><a href="#benefits" class="nav-link">Benefícios</a></li>
+                <li><a href="#form-section" class="nav-link">Formulário</a></li>
+            </ul>
+            <a href="/" class="book-tour-btn">Voltar</a>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Faça seu cadastro na Forge<br><span>Comece sua jornada hoje</span></h1>
+            <p class="hero-subtitle">Cadastre-se rapidamente e comece a aproveitar planos e treinos personalizados na sua unidade preferida.</p>
+            <div class="hero-buttons">
+                <a href="#form-section" class="btn-primary">Cadastrar agora</a>
+                <a href="#benefits" class="btn-secondary">Ver benefícios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="benefits">
+        <div class="container about-grid">
+            <div class="about-text fade-left">
+                <h2>Por que se cadastrar?</h2>
+                <p>Receba atendimento personalizado, planos exclusivos e suporte dos nossos profissionais para atingir resultados reais.</p>
+                <ul class="plan-features">
+                    <li>✅ Planos ajustados ao seu objetivo</li>
+                    <li>✅ Acesso rápido às primeiras aulas</li>
+                    <li>✅ Suporte completo de equipe qualificada</li>
+                </ul>
+            </div>
+            <div class="about-image fade-right">
+                <img src="https://i.imgur.com/ZGPYWvg.jpeg" alt="Cadastro Forge Fitness">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cadastro de aluno</h2>
+                <p>Preencha os dados abaixo para criar sua conta e iniciar seu treinamento.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <form id="registration-form" class="contact-form">
+                        <div class="form-header">
+                            <h3>Dados do aluno</h3>
+                            <p>Campos obrigatórios marcados com *</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Nome *</label>
+                            <input type="text" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Curso *</label>
+                            <input type="text" name="curso" placeholder="Nome do curso" required>
+                        </div>
+                        <button type="submit" class="form-submit">Enviar cadastro</button>
+                        <div id="registration-notice" class="form-notice"></div>
+                    </form>
+                </div>
+
+                <div class="contact-left">
+                    <div class="contact-info">
+                        <h3>Como funciona</h3>
+                        <p>Após preencher o cadastro, nossos atendentes entrarão em contato para confirmar seu plano e auxiliá-lo na primeira aula.</p>
+                        <ul class="contact-details">
+                            <li><strong>Suporte</strong><span>12h - 20h</span></li>
+                            <li><strong>Telefone</strong><span>(31) 99999-9999</span></li>
+                            <li><strong>Email</strong><span>contato@forgefitness.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planos disponíveis</h2>
+                <p>Escolha o plano que melhor combina com seu ritmo e seu objetivo.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Básico</h3>
+                    <div class="plan-price">R$139<span class="price-period">/mês</span></div>
+                    <ul class="plan-features">
+                        <li>Academia completa</li>
+                        <li>Treino personalizado</li>
+                        <li>Acesso livre às unidades</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 class="plan-name">Benéfico</h3>
+                    <div class="plan-price">R$169<span class="price-period">/mês</span></div>
+                    <ul class="plan-features">
+                        <li>Sauna e estacionamento</li>
+                        <li>Consultas mensais</li>
+                        <li>Aulas em grupo</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="plan-name">Completo</h3>
+                    <div class="plan-price">R$240<span class="price-period">/mês</span></div>
+                    <ul class="plan-features">
+                        <li>Área Premium</li>
+                        <li>Treinos + spa recovery</li>
+                        <li>Suporte completo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Forge Fitness - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="/tooplate-forge-script.js"></script>
+</body>
+</html>

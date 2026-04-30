@@ -1,28 +1,26 @@
 {
-  "name": "projeto3-crud-supabase",
+  "name": "projeto3-crud-sqlite",
   "version": "1.0.0",
-  "description": "CRUD completo com Express, EJS e Supabase (PostgreSQL)",
+  "description": "CRUD completo com Express e SQLite",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "seed": "node scripts/seed.js"
   },
   "keywords": [
     "node",
     "express",
-    "ejs",
-    "supabase",
+    "sqlite",
     "crud"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@supabase/supabase-js": "^2.39.0",
     "dotenv": "^16.3.1",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "sqlite": "^4.1.0",
+    "sqlite3": "^5.1.6"
   },
-  "devDependencies": {
-    "supabase": "^2.95.6"
-  }
+  "devDependencies": {}
 }
