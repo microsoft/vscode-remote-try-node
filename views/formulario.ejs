@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gestão Escolar <span class="badge" style="background:#10b981; color:white;">Supabase DB</span></h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2><%= titulo %></h2>
+            <p>
+                <% if (aluno) { %>
+                    Atualize os dados do aluno abaixo.
+                <% } else { %>
+                    Preencha os dados para salvar no banco de dados Supabase.
+                <% } %>
+            </p>
+
+            <form action="/salvar" method="POST">
+                <!-- Se for edição, envia o ID oculto -->
+                <% if (aluno) { %>
+                    <input type="hidden" name="id" value="<%= aluno.id %>">
+                <% } %>
+
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required 
+                           value="<%= aluno ? aluno.nome : '' %>"
+                           placeholder="Ex: Maria Antonieta">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail (opcional):</label>
+                    <input type="email" id="email" name="email" 
+                           value="<%= aluno ? aluno.email : '' %>"
+                           placeholder="Ex: maria@escola.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="curso">Curso Técnico:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione um curso...</option>
+                        <% 
+                           const cursos = [
+                               "Desenvolvimento de Sistemas", 
+                               "Redes de Computadores", 
+                               "Administração", 
+                               "Design Gráfico"
+                           ];
+                        %>
+                        <% cursos.forEach(function(c) { %>
+                            <option value="<%= c %>" <%= aluno && aluno.curso === c ? 'selected' : '' %>>
+                                <%= c %>
+                            </option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <button type="submit" class="btn" style="background-color: #10b981;">
+                        <%= aluno ? 'Atualizar Aluno' : 'Salvar Novo Aluno' %>
+                    </button>
+                    <a href="/" class="btn" style="background-color: #64748b; margin-left: 10px;">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

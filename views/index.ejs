@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gestão Escolar <span class="badge" style="background:#10b981; color:white;">Supabase DB</span></h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Lista de Alunos (Banco de Dados Real)</h2>
+                <a href="/novo" class="btn">+ Novo Aluno</a>
+            </div>
+            
+            <p>Estes dados estão sendo buscados diretamente do banco de dados PostgreSQL no Supabase.</p>
+
+            <% if (alunos && alunos.length > 0) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Curso</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% alunos.forEach(function(aluno) { %>
+                            <tr>
+                                <td><%= aluno.id %></td>
+                                <td><strong><%= aluno.nome %></strong></td>
+                                <td><%= aluno.email || 'Não informado' %></td>
+                                <td><span class="badge"><%= aluno.curso %></span></td>
+                                <td class="actions">
+                                    <a href="/editar/<%= aluno.id %>" class="btn btn-warning">Editar</a>
+                                    <a href="/deletar/<%= aluno.id %>" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja remover o aluno <%= aluno.nome %>?')">Excluir</a>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; text-align: center; margin-top: 20px;">
+                    <h3 style="color: #64748b;">Nenhum aluno encontrado no banco de dados.</h3>
+                    <p style="color: #94a3b8;">Cadastre o primeiro aluno para testar o sistema!</p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
