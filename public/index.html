@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>メッセージ管理 - XXXフルオーダーに関して</title>
+	<title>メッセージ管理(ミツモア風) - XXXフルオーダーに関して</title>
 	<style>
-		* { box-sizing: border-box; }
+		* {
+			box-sizing: border-box;
+		}
+
 		body {
 			margin: 0;
 			font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 			background: #f0f2f5;
 			color: #1c1e21;
 		}
+
 		header {
 			padding: 12px 20px;
 			background: #fff;
@@ -20,7 +25,12 @@
 			align-items: center;
 			justify-content: space-between;
 		}
-		header h1 { font-size: 18px; margin: 0; }
+
+		header h1 {
+			font-size: 18px;
+			margin: 0;
+		}
+
 		header button {
 			border: 1px solid #ccc;
 			background: #fff;
@@ -29,12 +39,14 @@
 			cursor: pointer;
 			font-size: 13px;
 		}
+
 		.stage {
 			display: flex;
 			gap: 16px;
 			padding: 16px;
 			height: calc(100vh - 53px);
 		}
+
 		.pane {
 			flex: 1;
 			display: flex;
@@ -42,15 +54,48 @@
 			background: #fff;
 			border-radius: 10px;
 			overflow: hidden;
-			box-shadow: 0 1px 3px rgba(0,0,0,.1);
+			box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
 		}
+
 		.pane-head {
 			padding: 12px 16px;
 			font-weight: 600;
 			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 8px;
 		}
-		.pane.user .pane-head { background: #1877f2; }
-		.pane.pro .pane-head { background: #00a152; }
+
+		.pane-head .toggle {
+			border: 1px solid rgba(255, 255, 255, .7);
+			background: transparent;
+			color: #fff;
+			border-radius: 6px;
+			padding: 2px 10px;
+			font-size: 12px;
+			cursor: pointer;
+			white-space: nowrap;
+		}
+
+		.pane.user .pane-head {
+			background: #1877f2;
+		}
+
+		.pane.pro .pane-head {
+			background: #00a152;
+		}
+
+		.pane.collapsed {
+			flex: 0 0 auto;
+			align-self: flex-start;
+		}
+
+		.pane.collapsed .messages,
+		.pane.collapsed .composer {
+			display: none;
+		}
+
 		.messages {
 			flex: 1;
 			overflow-y: auto;
@@ -60,7 +105,11 @@
 			gap: 10px;
 			background: #f7f8fa;
 		}
-		.msg { max-width: 80%; }
+
+		.msg {
+			max-width: 80%;
+		}
+
 		.msg .bubble {
 			padding: 8px 12px;
 			border-radius: 14px;
@@ -70,31 +119,57 @@
 			white-space: pre-wrap;
 			text-align: left;
 		}
+
 		.msg img {
 			max-width: 200px;
 			border-radius: 10px;
 			display: block;
 			margin-top: 4px;
 		}
+
 		.msg .file-link {
 			display: flex;
 			align-items: center;
 			gap: 8px;
 			margin-top: 4px;
 			padding: 8px 10px;
-			background: rgba(0,0,0,.08);
+			background: rgba(0, 0, 0, .08);
 			border-radius: 8px;
 			text-decoration: none;
 			color: inherit;
 		}
-		.msg .file-link .icon { font-size: 22px; }
-		.msg .file-link .fname { font-size: 13px; word-break: break-all; }
-		.msg .meta { font-size: 11px; color: #888; margin-top: 3px; }
+
+		.msg .file-link .icon {
+			font-size: 22px;
+		}
+
+		.msg .file-link .fname {
+			font-size: 13px;
+			word-break: break-all;
+		}
+
+		.msg .meta {
+			font-size: 11px;
+			color: #888;
+			margin-top: 3px;
+		}
+
 		/* 自分の発言は右寄せ */
-		.msg.mine { align-self: flex-end; text-align: right; }
+		.msg.mine {
+			align-self: flex-end;
+			text-align: right;
+		}
+
 		.pane.user .msg.user .bubble,
-		.pane.pro .msg.pro .bubble { background: #1877f2; color: #fff; }
-		.pane.pro .msg.pro .bubble { background: #00a152; }
+		.pane.pro .msg.pro .bubble {
+			background: #1877f2;
+			color: #fff;
+		}
+
+		.pane.pro .msg.pro .bubble {
+			background: #00a152;
+		}
+
 		.composer {
 			border-top: 1px solid #eee;
 			padding: 10px;
@@ -102,6 +177,7 @@
 			gap: 8px;
 			align-items: center;
 		}
+
 		.composer textarea {
 			flex: 1;
 			border: 1px solid #ccc;
@@ -113,7 +189,9 @@
 			resize: vertical;
 			max-height: 140px;
 		}
-		.composer button, .composer label {
+
+		.composer button,
+		.composer label {
 			border: none;
 			background: #1877f2;
 			color: #fff;
@@ -123,13 +201,19 @@
 			font-size: 14px;
 			white-space: nowrap;
 		}
-		.composer label { background: #e4e6eb; color: #333; }
+
+		.composer label {
+			background: #e4e6eb;
+			color: #333;
+		}
+
 		.composer .preview {
 			max-height: 32px;
 			border-radius: 4px;
 		}
 	</style>
 </head>
+
 <body>
 	<header>
 		<h1>メッセージ管理 - XXXフルオーダーに関して</h1>
@@ -137,7 +221,7 @@
 	</header>
 	<div class="stage">
 		<section class="pane user" data-role="user">
-			<div class="pane-head">👤 ユーザー（依頼者）</div>
+			<div class="pane-head"><span>👤 ユーザー（依頼者）</span><button class="toggle" type="button">閉じる</button></div>
 			<div class="messages"></div>
 			<form class="composer">
 				<label>📎<input type="file" accept="image/*,application/pdf" hidden /></label>
@@ -147,7 +231,7 @@
 			</form>
 		</section>
 		<section class="pane pro" data-role="pro">
-			<div class="pane-head">🛠️ 業者（プロ）</div>
+			<div class="pane-head"><span>🛠️ オペレーター（運営者）</span><button class="toggle" type="button">閉じる</button></div>
 			<div class="messages"></div>
 			<form class="composer">
 				<label>📎<input type="file" accept="image/*,application/pdf" hidden /></label>
@@ -159,7 +243,7 @@
 	</div>
 
 	<script>
-		const ROLE_LABEL = { user: 'ユーザー', pro: '業者' };
+		const ROLE_LABEL = { user: 'ユーザー', pro: 'オペレーター' };
 
 		// 添付ファイルを種類に応じて表示（画像はインライン、それ以外はリンク）
 		function renderAttachment(file) {
@@ -278,9 +362,19 @@
 			poll();
 		});
 
+		// ヘッダーの「閉じる/開く」でペインを折りたたみ
+		document.querySelectorAll('.pane-head .toggle').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const pane = btn.closest('.pane');
+				const collapsed = pane.classList.toggle('collapsed');
+				btn.textContent = collapsed ? '開く' : '閉じる';
+			});
+		});
+
 		document.querySelectorAll('.pane').forEach(setupComposer);
 		poll();
 		setInterval(poll, 2000);
 	</script>
 </body>
+
 </html>
