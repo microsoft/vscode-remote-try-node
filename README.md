@@ -40,6 +40,12 @@ Follow these steps to open this sample in a container using the VS Code Dev Cont
 
 ## Things to try
 
+### Toolchain
+
+This sample uses Node.js 26 on Debian 13 (Trixie), Express 5, and ESLint 10.
+Run `npm run lint` to check the code and `npm start` to start the sample.
+ESLint uses the flat configuration in [eslint.config.mjs](eslint.config.mjs).
+
 Once you have this sample opened, you'll be able to work with it like you would locally.
 
 Some things to try:
@@ -48,7 +54,7 @@ Some things to try:
    - Open `server.js`
    - Try adding some code and check out the language features. 
    - Make a spelling mistake and notice it is detected. The [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extension was automatically installed because it is referenced in `.devcontainer/devcontainer.json`.
-   - Also notice that `eslint` and the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) are installed. Tools are installed in the `mcr.microsoft.com/devcontainers/javascript-node` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
+   - Also notice that `eslint` and the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) are installed. ESLint is a project dependency installed by `npm install`. The Node.js tools and extension metadata come from the `mcr.microsoft.com/devcontainers/javascript-node` image's [labels](https://containers.dev/implementors/reference/#labels).
 
 2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
 3. **Build, Run, and Debug:**
